@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<?xml-stylesheet type="text/css" href="student.css"?> 
+<VTU> 
+    <STUDENT> 
+        <USN>1MJ17CS001</USN> 
+        <NAME>Simran Kumaran</NAME> 
+        <COLLEGE>MVJ College of Engineering</COLLEGE> 
+        <BRANCH>Computer Science and Engineering</BRANCH> 
+        <YEAR>2017</YEAR> 
+        <EMAILID>simran@gmail.com</EMAILID> 
+    </STUDENT> 
+    <STUDENT> 
+        <USN>1MJ10ME012</USN> 
+        <NAME>Swathi</NAME> 
+        <COLLEGE>MVJ College of Engineering</COLLEGE> 
+        <BRANCH>Mechanical Engineering</BRANCH>
+        <YEAR>2010</YEAR> 
+        <EMAILID>swathij@gmail.com</EMAILID> 
+    </STUDENT> 
+    <STUDENT> 
+        <USN>1MJ12AE030</USN> 
+        <NAME>Pooja</NAME> 
+        <COLLEGE>MVJ College of Engineering</COLLEGE> 
+        <BRANCH>Aeronautical Engineering</BRANCH> 
+        <YEAR>2012</YEAR> 
+        <EMAILID>pooja@gmail.com</EMAILID> 
+    </STUDENT> 
+</VTU>

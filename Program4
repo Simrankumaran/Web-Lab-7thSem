@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html>  
+<head>
+    <title>Left Most Vowel & Reversal of a Number</title>
+<style > 
+    body{ 
+        background-color: #FFFDD0;  
+        color:#8C8833;  
+        margin: 30px; 
+    } 
+    #resultS, #resultN{ 
+        display: block;  
+        background-color: #FFFFFF; 
+    } 
+    #warningN{ 
+        color:red;  
+        font-style:italic;  
+    } 
+</style>  
+</head> 
+<body> 
+    <header><h1>Javascript functions</h1></header> 
+    <nav> 
+        <ul> 
+        <li>Find Left Most Vowel</li> 
+        <li>Reverese of Number</li> 
+        </ul> 
+    </nav> 
+    <section> 
+        <h2 id="option">Choose an option</h2> 
+        <article> 
+            <h3> Find the left most vowel </h3> 
+            <p> 
+            Enter a string: <input id ='paramS' type='text' size='10' /><br /> 
+            <button onClick='lvowel()'> Enter </button> 
+            </p> 
+            <p id="resultS"> </p> 
+        </article> 
+        <article> 
+            <h3> Find the reverse of a number </h3> 
+            <p> 
+            Enter a number: <input id ='paramN' type='text' size='10' /> <span id="warningN"></span> <br /> <button onClick='rev()'> Enter </button> 
+            </p> 
+            <p id="resultN"> </p> 
+        </article> 
+    </section> 
+</body> 
+<script> 
+    function lvowel(){ 
+        var str = document.getElementById("paramS").value.toUpperCase(); 
+        for(var i=0; i<str.length; i++){ 
+            chr = str.charAt(i); 
+            if(chr=='A' || chr=='E' || chr=='I' || chr == 'O' || chr=='U'){ 
+                document.getElementById("resultS").innerHTML="The leftmost vowel is in  position "+(i+1); 
+                break; 
+            } 
+        } 
+    } 
+    function rev(){ 
+        var num = document.getElementById("paramN").value; 
+        if(isNaN(num)){ 
+            document.getElementById("warningN").innerHTML = "Enter a valid Number!";  return; 
+        } 
+        else  
+            document.getElementById("warningN").innerHTML = ""; 
+        var rev=""; 
+        for(var i=num.length-1; i>=0;i--){ 
+            rev+= num.charAt(i); 
+        } 
+        document.getElementById("resultN").innerHTML="The reverse is "+rev; 
+    }
+</script> 
+</html> 

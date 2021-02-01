@@ -29,15 +29,19 @@
             print("STATES[$i]=$value<br>");
         
         foreach($states1 as $state){
+            //ends with xas
             if(preg_match("/xas$/",$state)){
                 $statesArray[0]=$state;
             }
+            //starts with K and ends with s
             if(preg_match("/^K.*s$/",$state)){
                 $statesArray[1]=$state;
             }
+            //starts with M and ends with s
             if(preg_match("/^M.*s$/",$state)){
                 $statesArray[2]=$state;
             }
+            //ends with a
             if(preg_match("/a$/",$state)){
                 $statesArray[3]=$state;
             }

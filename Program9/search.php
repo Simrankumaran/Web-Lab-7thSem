@@ -8,13 +8,6 @@
             color: #00080f;
             margin: 30px;
         }
-        #calculator {
-            margin: 20px;
-            padding: 20px;
-
-            float: center;
-            border: thin solid black;
-        }
     </style>
 </head>
 <body>

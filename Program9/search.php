@@ -19,26 +19,35 @@
 </head>
 <body>
     <h1> Search in states</h1>
-    <?php include("states.php");
-        echo "<hr />";
-        // search for word ending in xas
-        preg_match( '/\b (\w*xas) \b/', $states, $match);
-        $statesList[0] = $match[0];
-        preg_match('/\b(k\w*s)\b/i', $states,$match);
-        $statesList[1] = $match[0];
-        preg_match('/\b(M\w*s)\b/', $states,$match);
-        $statesList[2] = $match[0];
-        preg_match('/\b(\w*a)\b/', $states,$match);
-        $statesList[3] = $match[0];
-        list($a, $b, $c, $d) = $statesList;
-        echo "<h4> State ending in xas </h4>";
-        echo $a;
-        echo "<h4> State beginning with k and ending in s -case insensitive </h4>";
-        echo $b;
-        echo "<h4> State beginning with M and ending in s</h4>";
-        echo $c;
-        echo "<h4> State ending with a</h4>";
-        echo $d;
+    <?php 
+        $states = "Mississippi Alabama Texas Massachusetts Kansas";
+        $statesArray=[];
+        $states1=explode(" ",$states);
+
+        echo "Original Array:<br>";
+        foreach ($states1 as $i=> $value)
+            print("STATES[$i]=$value<br>");
+        
+        foreach($states1 as $state){
+            if(preg_match("/xas$/",$state)){
+                $statesArray[0]=$state;
+            }
+            if(preg_match("/^K.*s$/",$state)){
+                $statesArray[1]=$state;
+            }
+            if(preg_match("/^M.*s$/",$state)){
+                $statesArray[2]=$state;
+            }
+            if(preg_match("/a$/",$state)){
+                $statesArray[3]=$state;
+            }
+        }
+        ksort($statesArray);
+
+        echo "Sorted Array:<br>";
+        foreach($statesArray as $array=> $value)
+            print("STATES[$array]=$value<br>");
+
     ?>
 </body>
 </html>
